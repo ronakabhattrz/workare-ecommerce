@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   	namespace :admin do
 	  	get 'contacts', to: 'contacts#index', as: 'admin/contacts'
 	  end
+	  namespace :storefront do
+			get 'req', to: 'request#req'
+		end
 	end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

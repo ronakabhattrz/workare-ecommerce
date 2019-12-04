@@ -106,7 +106,7 @@
           = append_partials('storefront.page_header')
 
       .page-content
-
+        = render 'workarea/storefront/favicons/dropdown'
         .content-wrapper
           - if content_for?(:breadcrumbs)
             .breadcrumbs{ role: 'navigation' }

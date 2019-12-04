@@ -1,0 +1,21 @@
+
+<% if @both == false %>
+	$('#make').empty();
+	<% if @data.present? %>
+		<% @data["make"].each do |data| %>
+			$('#make').append(
+				$('<option></option>').val('<%= data["id"].join(", ") %>').html('<%= data["data"].join(", ") %>')
+			);
+		<% end %>
+	<% end %>
+<% else %>
+	$('#model').empty();
+	<% if @data.present? %>
+		<% @data["model"].each do |data| %>
+			$('#model').append(
+				$('<option></option>').val('<%= data["id"].join(", ") %>').html('<%= data["data"].join(", ") %>')
+			);
+		<% end %>
+	<% end %>
+<% end %>
+$('.loading').hide();
